@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link
+      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <h3><a href="">Tic Tac Toe</a></h3>
+        </div>
+        <button class="nav-btn">New game</button>
+      </nav>
+    </header>
+    <div class="form-container">
+      <form action="" class="form">
+        <span class="form-close-btn"><i class="fa fa-times"></i></span>
+        <h3 class="form-heading">New Game</h3>
+        <div class="form-group">
+          <input
+            type="text"
+            id="title"
+            placeholder=" "
+            class="form-input"
+            data-marker="X"
+            data-player="playerOne"
+            autofocus
+            required
+          />
+          <label for="title" class="form-label">First Player</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            id="title"
+            placeholder=" "
+            data-player="playerTwo"
+            data-marker="O"
+            class="form-input"
+            autofocus
+            required
+          />
+          <label for="title" class="form-label">Second Player</label>
+        </div>
+        <button class="form-btn">New game</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="scoreBoard">
+          <p class="playerOnePlaceholder">Player 1</p>
+          <div class="scores">
+            <h3>Scoreboard</h3>
+            <div>
+              <span class="playerOne">0</span>
+              <span>:</span>
+              <span class="playerTwo">0</span>
+            </div>
+          </div>
+          <p class="playerTwoPlaceholder">Player 2</p>
+        </div>
+        <div class="board"></div>
+        <div class="game-info">
+          <!-- <p>Player 2 wins</p> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

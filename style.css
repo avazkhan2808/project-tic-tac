@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #202020;
+}
+.header {
+  padding: 1rem 10%;
+  background: #262626;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-items: center;
+}
+.logo a {
+  color: #007bff;
+}
+.nav-btn,
+.form-btn {
+  border: none;
+  outline: none;
+  background: #007bff;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(-150vh);
+  overflow: hidden;
+  transition: 300ms all ease-in-out;
+}
+.toggleClose {
+  transform: translateY(0);
+}
+.form {
+  background: #262626;
+  padding: 2.5rem 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.form-close-btn {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  padding: 0.8rem;
+  margin: -0.8rem;
+  color: #fff;
+}
+.form-heading {
+  color: #007bff;
+  align-self: center;
+  margin-bottom: 1.5rem;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form-input {
+  border: none;
+  outline: none;
+  padding: 0.7rem 0.4rem;
+  background: #202020;
+  border: 2px solid transparent;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.form-label {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  transition: all 150ms ease-in-out;
+  pointer-events: none;
+  color: #fff;
+}
+.form-btn {
+  align-self: center;
+  margin-top: 0.5rem;
+}
+.form-input::placeholder {
+  color: #fff;
+}
+.form-input:focus {
+  border-color: #202020;
+  background: transparent;
+}
+.form-input:focus + .form-label {
+  top: -16px;
+  left: 0;
+  font-size: 80%;
+  font-weight: 600;
+}
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -16px;
+  left: 0;
+  font-size: 80%;
+  font-weight: 600;
+}
+.container {
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  transform: translateY(-150vh);
+  overflow: hidden;
+  transition: 300ms all ease-in-out;
+}
+.wrapperActive {
+  transform: translateY(0);
+}
+.scoreBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #313131;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  width: 350px;
+  justify-content: space-between;
+}
+.scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scores h3 {
+  margin-bottom: 15px;
+}
+.board {
+  background: #262626;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  flex-wrap: wrap;
+}
+.square {
+  width: 80px;
+  height: 80px;
+  background: #313131;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.x-marker {
+  color: #e62d2d;
+  font-size: 30px;
+  font-weight: 600;
+  animation: anim 200ms ease-in-out forwards;
+  transition: all ease-in-out 200ms;
+}
+.o-marker {
+  color: #1d3add;
+  font-size: 30px;
+  font-weight: 400;
+  animation: anim 200ms ease-in-out forwards;
+  transition: all ease-in-out 200ms;
+}
+.game-info {
+  background: #313131;
+  color: #e62d2d;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 1.5rem 2rem;
+  width: 350px;
+  text-align: center;
+}
+
+@keyframes anim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

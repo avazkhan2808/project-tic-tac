@@ -140,7 +140,7 @@ const DisplayController = (() => {
             // Rerender after 1.5 seconds
             setTimeout(() => {
               reRenderBoard();
-            }, 1500);
+            }, 1000);
           }
         } else if (playerNames[1].getIsTurn() && li.childNodes.length < 1) {
           i.className = playerNames[1].getMarker();
@@ -158,11 +158,9 @@ const DisplayController = (() => {
             // Rerender after 1.5 seconds
             setTimeout(() => {
               reRenderBoard();
-            }, 1500);
+            }, 1000);
           }
-        }
-
-        if (allMoves.length >= 9) {
+        } else if (allMoves.length >= 8) {
           const gameInfo = document.querySelector('.game-info');
           gameInfo.textContent = "It's draw!";
           allMoves.length = 0;
@@ -170,7 +168,7 @@ const DisplayController = (() => {
           setTimeout(() => {
             gameInfo.textContent = '';
             reRenderBoard();
-          }, 1500);
+          }, 1000);
         }
       });
       board.append(li);
@@ -182,7 +180,7 @@ const DisplayController = (() => {
       player.setWins();
       setTimeout(() => {
         gameInfo.textContent = '';
-      }, 1500);
+      }, 1000);
     };
 
     const reRenderBoard = () => {
